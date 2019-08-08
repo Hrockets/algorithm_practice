@@ -8,7 +8,7 @@ class Solution {
 public:
 	bool IsContinuous(vector<int> numbers) {
 
-		if (numbers.size() == 0) return false;
+		if (numbers.size() != 5) return false;
 
 		int* d = new int[14];
 		d[0] = -5;
@@ -19,6 +19,8 @@ public:
 			d[numbers[i]]++;
 			if (numbers[i] == 0)//大小王
 				continue;
+			if (numbers[i] < 0 || numbers[i] >= 14) 
+				return false;
 			if (d[numbers[i]] > 1)//顺子里牌唯一
 				return false;
 			if (numbers[i] > max) {
