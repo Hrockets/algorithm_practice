@@ -12,7 +12,7 @@ public:
 	}
 	bool bfs(vector<int> v, int start, int end)
 	{
-		if (start >= end) return true;
+		if (start >= end) return true;//µÝ¹é³ö¿Ú
 		int i = start;
 		while (v[i] < v[end]) {
 			i++;
