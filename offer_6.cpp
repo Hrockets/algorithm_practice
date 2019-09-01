@@ -15,7 +15,7 @@ public:
 		int Midindex = index1;//可能未旋转，直接返回首元素
 		while (rotateArray[index1] >= rotateArray[index2])
 		{
-			if (index2 - index1 == 1)
+			if (index2 - index1 == 1)//循环出口
 			{
 				Midindex = index2;
 				break;
